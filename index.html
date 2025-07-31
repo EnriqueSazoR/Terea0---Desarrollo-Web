@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="clase.css" />
+    <title>Página de inicio</title>
+  </head>
+  <body>
+    
+    <div class="header">
+      <div class="left-box"></div>
+      <div class="center-box">
+        <div class="profile-pic">
+          <i class="fas fa-user-circle fa-4x"></i>
+        </div>
+        <h2 class="nombre">Luis Sazo</h2>
+        <div class="links">
+          <a href="#">Inicio</a> | <a href="#">Php</a> | <a href="#">.Net</a> |
+          <a href="#">Java</a>
+        </div>
+      </div>
+      <div class="right-box"></div>
+    </div>
+
+    <h1>Lenguajes de Programación</h1>
+    <div class="contenido">
+      <ol>
+        <li>
+           Páginas Web
+          <ul>
+            <li><i class="fab fa-java"></i> Jsp</li>
+            <li><i class="fab fa-windows"></i> Aspx</li>
+            <li><i class="fab fa-php"></i> Php</li>
+          </ul>
+        </li>
+        <li>
+          Aplicaciones
+          <ul>
+            <li><i class="fab fa-java"></i> Java</li>
+            <li><i class="fas fa-brain"></i> Visual Basic</li>
+            <li><i class="fas fa-code"></i> C#</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <div class="tabla">
+      <table>
+        <tr>
+          <th colspan="2">Programación Web</th>
+        </tr>
+        <tr>
+          <td>Asp</td>
+          <td>Jsp</td>
+        </tr>
+        <tr>
+          <td>Php</td>
+          <td>Ruby</td>
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td>Go</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="formulario">
+      <form id="miFormulario">
+        <input
+          type="text"
+          name="nombres"
+          id="nombres"
+          placeholder="Ingrese Nombres"
+        /><br />
+        <input
+          type="text"
+          name="apellidos"
+          id="apellidos"
+          placeholder="Ingrese Apellidos"
+        /><br />
+        <input
+          type="text"
+          name="telefono"
+          id="telefono"
+          placeholder="Ingrese Número Teléfonico"
+        /><br />
+        <input
+          type="email"
+          name="correo"
+          id="correo"
+          placeholder="Ingrese Correo Electrónico"
+        /><br />
+        <input type="date" name="fecha" id="fecha" /><br />
+        <input
+          type="text"
+          name="mensaje"
+          id="mensaje"
+          placeholder="Ingrese el Mensaje"
+        /><br />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="redes">
+      <h3>Redes Sociales</h3>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+
+    <div class="footer">
+      <p>Aprende a Programar Fácil y Rápido</p>
+    </div>
+
+    <script>
+      document
+        .getElementById("miFormulario")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var nombres = document.getElementById("nombres").value;
+          var apellidos = document.getElementById("apellidos").value;
+          var telefono = document.getElementById("telefono").value;
+          var correo = document.getElementById("correo").value;
+          var fecha = document.getElementById("fecha").value;
+          var mensaje = document.getElementById("mensaje").value;
+
+          const mensajeAlerta = `
+            Nombres: ${nombres}
+            Apellidos: ${apellidos}
+            Telefono: ${telefono}
+            Correo: ${correo}
+            Fecha: ${fecha}
+            Mensaje: ${mensaje}
+          `;
+
+          alert(mensajeAlerta);
+        });
+    </script>
+  </body>
+</html>
